@@ -121,7 +121,3 @@
 ```
 
 ---
-# 暫存檔案
-*.tmp
-.DS_Store
-Thumbs.db
