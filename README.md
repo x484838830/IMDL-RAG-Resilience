@@ -6,7 +6,7 @@
 
 ### Windows 10/11 (64位元)
 
-👉 **[點此下載最新版本](https://github.com/你的帳號/RAG-Resilience-Analyzer-Release/releases/latest)**
+👉 **[點此下載最新版本](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/latest)**
 
 **目前版本：** v1.0.0  
 **檔案大小：** 約 200 MB  
@@ -104,7 +104,7 @@
 
 ## 📧 聯絡我們
 
-- **問題回報**：[GitHub Issues](https://github.com/你的帳號/RAG-Resilience-Analyzer-Release/issues)
+- **問題回報**：[GitHub Issues](https://github.com/x484838830/RAG-Resilience-Analyzer/issues)
 - **功能建議**：歡迎在 Issues 中提出
 
 ---
