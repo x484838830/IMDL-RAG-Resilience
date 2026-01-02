@@ -121,16 +121,6 @@
 ```
 
 ---
-
-### **步驟 4：創建 .gitignore**
-
-在 `RAG-Release` 資料夾中創建 `.gitignore`：
-```
-# 安裝程式（用 Release 上傳）
-*.exe
-*.msi
-*.dmg
-
 # 暫存檔案
 *.tmp
 .DS_Store
