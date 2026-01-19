@@ -158,9 +158,35 @@
 
 ---
 
+## 👥 作者
+
+**Lo, Hsuan-Hao**
+- GitHub: [@x484838830](https://github.com/x484838830)
+- Email: x484838830@gmail.com
+
 ## 🙏 致謝
 
-感謝所有測試用戶的寶貴回饋！
-```
+感謝所有提供回饋與建議的貢獻者和使用者！
+
+特別感謝：
+- [Erik Hollnagel](https://erikhollnagel.com/) - 韌性工程RAG理論創始人
+- 台北醫學大學數據科學研究所
+- 國家科學及技術委員會
+
+## 📞 聯絡方式
+
+- 問題回報：[GitHub Issues](https://github.com/x484838830/RAG-Resilience-Analyzer/issues)
+- 功能建議：[GitHub Discussions](https://github.com/x484838830/RAG-Resilience-Analyzer/discussions)
+- 電子郵件：x484838830@gmail.com
+
+## 📚 相關資源
+
+- [RAG 方法論介紹](https://erikhollnagel.com/ideas/resilience-assessment-grid.html)
+- [韌性工程協會](https://www.resilience-engineering-association.org/)
+- [專案文件](https://github.com/x484838830/RAG-Resilience-Analyzer/wiki)
 
 ---
+
+**⭐ 如果這個專案對您有幫助，請給我們一個 Star！**
+
+Made with ❤️ by [Hsuan-Hao Lo](https://github.com/x484838830)
