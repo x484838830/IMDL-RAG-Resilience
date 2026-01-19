@@ -2,6 +2,10 @@
 
 > 組織韌性問卷自動化分析工具
 > 版本 3.0.0 - 專業級組織韌性評估與進階 PDF 報告生成系統
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Version](https://img.shields.io/badge/version-3.0.0-green.svg)](https://github.com/x484838830/RAG-Resilience-Analyzer)
+[![TypeScript](https://img.shields.io/badge/TypeScript-97.5%25-blue.svg)](https://github.com/x484838830/RAG-Resilience-Analyzer)
+
 ## 📥 下載安裝
 
 ### Windows 10/11 (64位元)
