@@ -179,11 +179,6 @@
 - 功能建議：[GitHub Discussions](https://github.com/x484838830/RAG-Resilience-Analyzer/discussions)
 - 電子郵件：x484838830@gmail.com
 
-## 📚 相關資源
-
-- [RAG 方法論介紹](https://erikhollnagel.com/ideas/resilience-assessment-grid.html)
-- [韌性工程協會](https://www.resilience-engineering-association.org/)
-- [專案文件](https://github.com/x484838830/RAG-Resilience-Analyzer/wiki)
 
 ---
 
