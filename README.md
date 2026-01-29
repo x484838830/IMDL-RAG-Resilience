@@ -198,6 +198,8 @@
 - GitHub: [@x484838830](https://github.com/x484838830)
 - Email: x484838830@gmail.com
 
+**Chuang, Sheuwen（莊秀文）**
+- Email: sheuwen@tmu.edu.tw
 ---
 
 ## 🙏 致謝 | Acknowledgments
@@ -207,7 +209,6 @@
 特別感謝：
 - [Erik Hollnagel](https://erikhollnagel.com/) - 韌性工程 RAG 理論創始人
 - 台北醫學大學數據科學研究所 莊秀文教授
-- 國家科學及技術委員會
 
 ---
 
