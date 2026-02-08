@@ -1,7 +1,7 @@
 # RAG 韌性評估分析系統 | RAG Resilience Analyzer
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/version-3.1.0-green.svg)](https://github.com/x484838830/RAG-Resilience-Analyzer)
+[![Version](https://img.shields.io/badge/version-3.2.0-green.svg)](https://github.com/x484838830/RAG-Resilience-Analyzer)
 [![TypeScript](https://img.shields.io/badge/TypeScript-97.5%25-blue.svg)](https://github.com/x484838830/RAG-Resilience-Analyzer)
 
 > 組織韌性問卷自動化分析工具 | Organizational Resilience Survey Analysis Tool
@@ -16,13 +16,15 @@
 
 | 版本 | 下載 | 發布日期 |
 |------|------|----------|
-| **v3.1.0** | [RAG Resilience Analyzer Chinese Setup 3.1.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v3.1.0-chinese/RAG.Resilience.Analyzer.Chinese.Setup.3.1.0.exe) | 2026-01-28 |
+| **v3.2.0** | [RAG Resilience Analyzer Chinese Setup 3.2.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v3.2.0-chinese/RAG.Resilience.Analyzer.Chinese.Setup.3.2.0.exe) | 2026-02-08 |
+| v3.1.0 | [RAG Resilience Analyzer Chinese Setup 3.1.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v3.1.0-chinese/RAG.Resilience.Analyzer.Chinese.Setup.3.1.0.exe) | 2026-01-28 |
 
 ### 🌐 English Version（英文版）
 
 | Version | Download | Release Date |
 |---------|----------|--------------|
-| **v3.0.0** | [RAG Resilience Analyzer Setup 3.0.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v3.0.0/RAG.Resilience.Analyzer.Setup.3.0.0.exe) | 2026-01-20 |
+| **v3.2.0** | [RAG Resilience Analyzer Setup 3.2.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v3.2.0/RAG.Resilience.Analyzer.Setup.3.2.0.exe) | 2026-02-08 |
+| v3.0.0 | [RAG Resilience Analyzer Setup 3.0.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v3.0.0/RAG.Resilience.Analyzer.Setup.3.0.0.exe) | 2026-01-20 |
 
 **系統需求 | System Requirements**：Windows 10/11 (64-bit)、4GB RAM、500MB 硬碟空間
 
@@ -30,7 +32,14 @@
 
 ## ✨ 版本功能 | Version Features
 
-### v3.1.0 中文版新功能
+### v3.2.0 新功能 🆕
+- 🎨 **圖表外觀自訂**：可選擇 5 種主題色票、調整線條粗細與透明度
+- 📊 **Excel 匯出功能**：一鍵匯出分析資料至 Excel 檔案
+- 🔀 **表格排序功能**：點擊標題即可排序，快速找出弱項
+- 🏢 **組織名稱輸入**：可自訂報告標題，顯示於 PDF 與 Excel 中
+- 📁 **自訂顏色支援**：配置檔可新增 `Colors` 工作表自訂各 Potential 顏色
+
+### v3.1.0 中文版功能
 - 🌐 **完整中文介面**：所有按鈕、標籤、提示訊息皆為繁體中文
 - 📄 **中文 PDF 報告**：匯出的 PDF 報告完整支援中文顯示（嵌入 Noto Sans TC 字體）
 - 🔄 **中英文配置檔支援**：Potential 欄位可使用中文或英文
@@ -82,6 +91,9 @@
 | ✅ 視覺化報告 | 生成四個 Potential 的雷達圖 |
 | ✅ 菱形圖分析 | 顯示各 Potential 面積占比與整體韌性分數 |
 | ✅ 匯出 PDF | 一鍵下載完整多頁專業分析報告 |
+| ✅ 匯出 Excel | 一鍵匯出分析資料至 Excel 檔案 |
+| ✅ 圖表外觀自訂 | 可選擇主題色票、調整線條粗細與透明度 |
+| ✅ 表格排序 | 點擊標題即可排序，快速找出弱項 |
 | ✅ 完全離線 | 無需網路連線即可使用 |
 | ✅ 資料隱私 | 所有資料在本地處理，不上傳雲端 |
 | ✅ 三級績效分類 | 更細緻的績效評估（紅/橘/綠） |
@@ -95,6 +107,7 @@
 - **Tailwind CSS** 響應式設計（桌機 + 行動裝置）
 - **Recharts** 圖表庫提供互動式視覺化
 - **jsPDF + jspdf-autotable** 專業 PDF 報告生成
+- **SheetJS (xlsx)** Excel 檔案匯入匯出
 - **Noto Sans TC** 中文字體嵌入（中文版）
 - **Electron** 跨平台桌面應用程式框架
 - 即時計算與分析，無需伺服器
@@ -130,16 +143,19 @@
 | `Settings` | 問題起始欄位設定 |
 | `Likert_Mapping` | 回答選項與分數對應 |
 | `Question_Mapping` | 題目與 Potential 對應 |
+| `Colors`（選填） | 自訂各 Potential 顏色 |
 
 **💡 提示：** 啟動程式後可點擊「下載配置範本」取得範例檔案。
 
 ### 3. 分析流程 | Analysis Process
 
 1. 啟動程式
-2. 上傳「問卷資料檔」和「配置檔」
-3. 點擊「開始分析」
-4. 查看四個雷達圖和菱形圖
-5. 點擊「匯出 PDF」下載報告
+2. 輸入組織名稱（選填）
+3. 上傳「問卷資料檔」和「配置檔」
+4. 點擊「開始分析」
+5. 調整圖表外觀（主題、線條粗細、透明度）
+6. 查看四個雷達圖和菱形圖
+7. 點擊「匯出 PDF」或「匯出 Excel」下載報告
 
 ---
 
@@ -162,6 +178,15 @@
 - 中文版：介面全中文、PDF 報告支援中文、配置檔可用中文 Potential 名稱
 - 英文版：介面全英文、PDF 報告英文
 
+### Q: 如何自訂圖表顏色？
+**A:** 在配置檔中新增 `Colors` 工作表，格式如下：
+| Potential | Color (Hex/Name) |
+|-----------|------------------|
+| Response | #3b82f6 |
+| Monitor | #ef4444 |
+| Anticipate | #f97316 |
+| Learn | #22c55e |
+
 ### Q: 如何卸載？
 **A:** 
 - 方法 1：執行安裝目錄中的 `Uninstall RAG Resilience Analyzer.exe`
@@ -170,6 +195,13 @@
 ---
 
 ## 📝 更新日誌 | Changelog
+
+### v3.2.0 (2026-02-08)
+- 🎨 圖表外觀自訂（主題色票、線條粗細、透明度）
+- 📊 Excel 匯出功能
+- 🔀 表格排序功能
+- 🏢 組織名稱輸入
+- 📁 配置檔 Colors 工作表支援
 
 ### v3.1.0 (2026-01-28) - 中文版
 - 🌐 完整中文介面
