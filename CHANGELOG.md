@@ -1,6 +1,59 @@
 # 更新日誌
 
 本專案的所有重要更改都將記錄在此檔案中。
+---
+## [4.0.0] - 2026-03-17
+
+### 🎉 重大功能更新
+
+#### 多語言介面支援（i18n）
+- 新增中英文介面切換功能，全系統所有靜態文字均支援雙語切換
+- 建立 `locales/en.json` 與 `locales/zh.json` 語系檔
+- 新增 `LanguageContext` 全域語言狀態管理
+- Excel 配置檔的 Potential 欄位現支援中文輸入（回應、監測、監控、預期、學習）
+
+#### AI 助手功能
+- 新增內建 AI 助手頁面，整合 Google Gemini 模型
+- 支援使用者自訂 Gemini API Key（留空則使用系統預設）
+- 提供模型選擇下拉選單（Gemini 3 Flash Preview、Gemini 3.1 Pro Preview、Gemini 3.1 Flash Lite Preview）
+- API Key 與模型選擇自動儲存至 localStorage，下次開啟免重填
+- AI 助手介面完整支援中英文切換
+
+### ✨ 功能改進
+
+#### 雷達圖優化
+- 指標分數直接顯示於雷達圖頂點標籤旁，無需對照底部表格
+- 分數文字顏色自動對應各 Potential 主題色
+- 智慧標籤偏移機制，避免文字遮擋圖表網格
+- 移除雷達圖底部的 Legend 對照表格，版面更簡潔
+
+#### 問卷量表選項調整
+- 新增 3-Point Scale（不同意、普通、同意）
+- 新增 6-Point Scale（非常不同意至非常同意）
+- 移除 10-Point Scale
+
+#### 報告與統計表格
+- 移除 Detailed Item Scores 區塊，報告版面更精簡
+- Descriptive Statistics 表格新增欄位排序功能（點擊標題即可排序）
+- 預設依照 Focus 欄位字母順序排列
+- PDF 匯出按鈕文字支援中英文切換
+
+### ✨ 視覺改進
+
+#### 動態背景效果
+- 全系統加入動態漸層色塊背景（含緩慢漂浮動畫）
+- 側邊欄與內容區塊加入毛玻璃效果（Backdrop Blur）
+- 受測者公開填答頁面同步套用動態背景
+
+### 🔧 技術細節
+- 新增 `AnimatedBackground` 元件統一管理動態背景
+- 新增 `pages/` 資料夾，拆分 SurveyBuilder、ExcelAnalysis、AIAssistant、SurveyPublic 頁面
+- `context/LanguageContext.tsx` 提供全域語言狀態
+
+### ⚠️ 重大變更
+- 系統架構重組，新增 `pages/`、`context/`、`locales/` 資料夾
+- 原規劃於 v3.1.0 的多語言支援與雷達圖優化提前實作並一併納入本版本
+- 原規劃於 v4.0.0 的 AI 功能提前實作
 
 ---
 ## [3.2.0] - 2026-02-08
