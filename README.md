@@ -12,23 +12,32 @@
 
 ## 📥 下載安裝 | Download
 
-### 🇹🇼 中文版（Chinese Version）- 推薦
+### 🌐 最新版本 | Latest Version
 
 | 版本 | 下載 | 發布日期 |
 |------|------|----------|
-| **v3.2.0** | [RAG Resilience Analyzer Chinese Setup 3.2.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v3.2.0/RAG.Resilience.Analyzer.Chinese.Setup.3.2.0.exe) | 2026-02-08 |
+| **v4.0.0** | [IMDL.RAG.Development-4.0.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v4.0.0/IMDL.RAG.Development-4.0.0.exe) | 2026-03-17 |
 
-### 🌐 English Version（英文版）
+### 📦 舊版本 | Previous Versions
 
-| Version | Download | Release Date |
-|---------|----------|--------------|
-| **v3.2.0** | [RAG Resilience Analyzer Setup 3.2.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v3.2.0/RAG.Resilience.Analyzer.Setup.3.2.0.exe) | 2026-02-08 |
+| 版本 | 下載 | 發布日期 |
+|------|------|----------|
+| v3.2.0 中文版 | [RAG Resilience Analyzer Chinese Setup 3.2.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v3.2.0/RAG.Resilience.Analyzer.Chinese.Setup.3.2.0.exe) | 2026-02-08 |
+| v3.2.0 英文版 | [RAG Resilience Analyzer Setup 3.2.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v3.2.0/RAG.Resilience.Analyzer.Setup.3.2.0.exe) | 2026-02-08 |
 
 **系統需求 | System Requirements**：Windows 10/11 (64-bit)、4GB RAM、500MB 硬碟空間
 
 ---
 
 ## ✨ 版本功能 | Version Features
+
+### v4.0.0 新功能 🆕
+- 🌐 **中英文雙語介面**：一鍵切換中英文，全系統同步更新
+- 🤖 **AI 助手**：內建 Google Gemini AI，支援自訂 API Key 與模型選擇
+- 📊 **雷達圖優化**：分數直接顯示於各指標標籤旁
+- 🎛️ **量表選項調整**：新增 3 點與 6 點量表，移除 10 點量表
+- 🎨 **動態背景效果**：漸層色塊浮動動畫 + 毛玻璃介面效果
+- 📁 **配置檔支援中文 Potential 名稱**：回應、監測、監控、預期、學習
 
 ### v3.2.0 新功能 🆕
 - 🎨 **圖表外觀自訂**：可選擇 5 種主題色票、調整線條粗細與透明度
@@ -96,6 +105,8 @@
 | ✅ 資料隱私 | 所有資料在本地處理，不上傳雲端 |
 | ✅ 三級績效分類 | 更細緻的績效評估（紅/橘/綠） |
 | ✅ 資料品質警告 | 自動偵測未定義的回答選項 |
+| ✅ 中英文雙語介面 | 一鍵切換語言，全系統同步 |
+| ✅ AI 助手 | 整合 Google Gemini，支援自訂 API Key |
 
 ---
 
@@ -193,6 +204,13 @@
 ---
 
 ## 📝 更新日誌 | Changelog
+
+### v4.0.0 (2026-03-17)
+- 🌐 中英文雙語介面（i18n）
+- 🤖 AI 助手（Google Gemini 整合）
+- 📊 雷達圖標籤直接顯示分數
+- 🎛️ 新增 3/6 點量表，移除 10 點量表
+- 🎨 動態背景與毛玻璃效果
 
 ### v3.2.0 (2026-02-08)
 - 🎨 圖表外觀自訂（主題色票、線條粗細、透明度）
