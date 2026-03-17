@@ -18,14 +18,7 @@
 |------|------|----------|
 | **v4.0.0** | [RAG Resilience Analyzer Setup 4.0.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v4.0.0/RAG.Resilience.Analyzer.Setup.4.0.0.exe) | 2026-03-17 |
 
-### 📦 舊版本 | Previous Versions
-
-| 版本 | 下載 | 發布日期 |
-|------|------|----------|
-| v3.2.0 中文版 | [RAG Resilience Analyzer Chinese Setup 3.2.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v3.2.0/RAG.Resilience.Analyzer.Chinese.Setup.3.2.0.exe) | 2026-02-08 |
-| v3.2.0 英文版 | [RAG Resilience Analyzer Setup 3.2.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v3.2.0/RAG.Resilience.Analyzer.Setup.3.2.0.exe) | 2026-02-08 |
-
-**系統需求 | System Requirements**：Windows 10/11 (64-bit)、4GB RAM、500MB 硬碟空間
+**系統需求 | System Requirements**：Windows 10/11 (64-bit)、4GB RAM、1000MB 硬碟空間
 
 ---
 
@@ -275,6 +268,13 @@
 ---
 
 **⭐ 如果這個專案對您有幫助，請給我們一個 Star！**
+
+## 📦 舊版本 | Previous Versions
+
+| 版本 | 下載 | 發布日期 |
+|------|------|----------|
+| v3.2.0 中文版 | [RAG Resilience Analyzer Chinese Setup 3.2.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v3.2.0/RAG.Resilience.Analyzer.Chinese.Setup.3.2.0.exe) | 2026-02-08 |
+| v3.2.0 英文版 | [RAG Resilience Analyzer Setup 3.2.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v3.2.0/RAG.Resilience.Analyzer.Setup.3.2.0.exe) | 2026-02-08 |
 
 **⭐ If this project helps you, please give us a Star!**
 
