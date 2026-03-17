@@ -16,7 +16,7 @@
 
 | 版本 | 下載 | 發布日期 |
 |------|------|----------|
-| **v4.0.0** | [IMDL.RAG.Development-4.0.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v4.0.0/IMDL.RAG.Development-4.0.0.exe) | 2026-03-17 |
+| **v4.0.0** | [RAG Resilience Analyzer Setup 4.0.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v4.0.0/RAG.Resilience.Analyzer.Setup.4.0.0.exe) | 2026-03-17 |
 
 ### 📦 舊版本 | Previous Versions
 
