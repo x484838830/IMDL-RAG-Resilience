@@ -267,8 +267,6 @@
 
 ---
 
-**⭐ 如果這個專案對您有幫助，請給我們一個 Star！**
-
 ## 📦 舊版本 | Previous Versions
 
 | 版本 | 下載 | 發布日期 |
@@ -276,6 +274,7 @@
 | v3.2.0 中文版 | [RAG Resilience Analyzer Chinese Setup 3.2.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v3.2.0/RAG.Resilience.Analyzer.Chinese.Setup.3.2.0.exe) | 2026-02-08 |
 | v3.2.0 英文版 | [RAG Resilience Analyzer Setup 3.2.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v3.2.0/RAG.Resilience.Analyzer.Setup.3.2.0.exe) | 2026-02-08 |
 
+**⭐ 如果這個專案對您有幫助，請給我們一個 Star！**
 **⭐ If this project helps you, please give us a Star!**
 
 Made with ❤️ by [Hsuan-Hao Lo](https://github.com/x484838830)
