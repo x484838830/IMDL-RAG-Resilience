@@ -2,6 +2,50 @@
 
 本專案的所有重要更改都將記錄在此檔案中。
 ---
+
+
+## [4.1.0] - 2026-04-04
+
+### 🎉 重大功能更新
+
+#### 問卷建立器全面升級（Survey Builder V2）
+- **專案式管理**：問卷採用 Project → Version 架構，支援版本控制與歷史追蹤
+- **題庫系統（Question Bank）**：內建分類題庫，依產業（製造業、醫療、科技、金融）與維度篩選推薦題目
+- **AI 輔助出題**：整合 Gemini AI，可透過自然語言描述自動生成問卷題目（例如：「我想評估遠端工作的資安意識」）
+- **版本發布流程**：支援 Draft → Published → Archived 完整生命週期
+- **量表範本系統**：預設支援 3/5/6 點 Likert 量表，一鍵套用
+
+#### AI 功能整合重構
+- **合併 AIAssistant 至 ReportGenerator**：移除獨立的 AI 助手頁面，將異常偵測、自然語言 Q&A、完整報告生成統一整合至「Report Generator」模組
+- 採用 `AISettingsContext` 集中管理 API Key 與模型設定
+- 側邊欄導航統一指向 `/report-generator`，消除路由不一致問題
+
+### ✨ 功能改進
+
+#### PDF 匯出中文支援
+- **NotoSansTC 中文字體**：PDF 報告全面支援中文顯示，解決 `helvetica` 字體中文亂碼問題
+- 字體檔案採用 base64 快取機制，避免重複下載
+- 所有 autoTable 表格（含 header、body、didParseCell）統一套用中文字體
+
+#### 圖表庫升級
+- `html2canvas` 升級為 `html2canvas-pro`，移除 `@ts-ignore` 標記
+- `jsPDF` 改為正確的 named import（`{ jsPDF }`）
+
+#### 圖表 Props 修正
+- 修正 RadarCard 元件 prop 名稱：`scale_points` → `maxScale`（修復量表上限永遠為預設值 5 的 bug）
+- 移除 DiamondChart 不存在的 `scale_points` prop
+
+### 🔧 技術細節
+- 新增 `vite-env.d.ts` 提供 `.ttf?url` 模組的 TypeScript 型別宣告
+- 新增 `lib/api.ts` API 服務層，支援 Supabase（雲端）與 Local（Demo）雙模式
+- 新增 `lib/scales.ts` 量表範本定義
+- 新增 `lib/demoResults.ts` Demo 模式假資料
+- 刪除 `pages/AIAssistant.tsx`（功能已合併至 ReportGenerator）
+
+### ⚠️ 重大變更
+- AI 助手頁面（`/ai-assistant`）已移除，所有 AI 功能統一由 Report Generator（`/report-generator`）提供
+- 問卷建立器完全重構，從單一表單改為專案式題庫架構
+
 ## [4.0.0] - 2026-03-17
 
 ### 🎉 重大功能更新
