@@ -16,13 +16,22 @@
 
 | 版本 | 下載 | 發布日期 |
 |------|------|----------|
-| **v4.0.0** | [RAG Resilience Analyzer Setup 4.0.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v4.0.0/RAG.Resilience.Analyzer.Setup.4.0.0.exe) | 2026-03-17 |
+| **v4.1.0** | [RAG Resilience Analyzer Setup 4.1.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v4.1.0/RAG.Resilience.Analyzer.Setup.4.1.0.exe) | 2026-04-04 |
 
 **系統需求 | System Requirements**：Windows 10/11 (64-bit)、4GB RAM、1000MB 硬碟空間
 
 ---
 
 ## ✨ 版本功能 | Version Features
+
+### v4.1.0 新功能 🆕
+- 📝 **問卷建立器全面升級**：專案式管理（Project → Version），支援版本控制與歷史追蹤
+- 📚 **題庫系統（Question Bank）**：內建分類題庫，依產業（製造業、醫療、科技、金融）與維度篩選推薦題目
+- 🤖 **AI 輔助出題**：透過自然語言描述自動生成問卷題目（整合 Gemini AI）
+- 🔄 **版本生命週期**：支援 Draft → Published → Archived 完整發布流程
+- 📄 **PDF 中文字體支援**：嵌入 NotoSansTC 字體，徹底解決中文亂碼問題
+- 🔧 **AI 功能整合**：移除獨立 AI 助手頁面，統一整合至 Report Generator 模組
+- 📊 **圖表 Props 修正**：修復 RadarCard 量表上限永遠為預設值 5 的 bug
 
 ### v4.0.0 新功能 🆕
 - 🌐 **中英文雙語介面**：一鍵切換中英文，全系統同步更新
