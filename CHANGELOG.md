@@ -3,7 +3,77 @@
 本專案的所有重要更改都將記錄在此檔案中。
 ---
 
+## [4.2.0] - 2026-04-22
 
+### 🎉 重大功能更新
+
+#### 次指標系統（Sub-Indicators）
+- **全新醫療場域次指標資料庫**：內建 80+ 個次指標，涵蓋 Response、Monitor、Anticipate、Learn 四大能力維度
+- **部門篩選**：支援整合醫學病房（IMW）、急診（ED）、AMU、內科（IM）、門診（OPD）五個部門分類
+- **中英雙語定義**：每個次指標附有完整英文 definition 與中文 definition_zh
+- **新資料檔 `data/subIndicators.ts`**：統一管理次指標與部門選項，提供 `getSubIndicators()` 與 `getDepartments()` 工具函式
+
+#### AI 批次出題
+- 勾選次指標後點擊「AI 出題」，開啟設定 Modal
+- 可自訂三個生成參數：受測對象（如「第一線現場人員」）、聚焦方向（如「實際執行情形」）、調查目的（選填）
+- AI 根據次指標定義、產業、部門、Likert 量表標籤，批次生成 Likert 題目並自動排除已有題目的次指標
+- 語言跟隨系統設定自動切換（繁中 / 英文）
+
+#### 自動異常偵測
+- 資料載入 Report Generator 後，自動呼叫 Gemini API 分析數據
+- 偵測項目：高標準差指標（> 1.0）、低分維度、跨維度顯著差異
+- 偵測結果以 Alert 提示卡列表方式顯示於頁面頂端
+- 支援錯誤回退：503（模型過載）/ 404（模型不存在）/ API Key 無效各有對應提示訊息
+
+#### AI 互動聊天（Report Generator）
+- Report Generator 頁新增聊天介面，可針對當前分析資料與 AI 即時問答
+- 對話記錄保存於 session，支援捲動至最新訊息
+- 分析數據摘要自動作為 context 傳入每次對話
+
+### ✨ 功能改進
+
+#### 架構轉移：Electron → Express + Vite
+- 移除 Electron、electron-builder、concurrently、cross-env、wait-on 相依套件
+- 新增 `server.ts`：Express 5 後端伺服器，整合 Vite dev server（開發時 HMR 支援）
+- 新增 cors、dotenv、express、tsx 相依套件
+- 執行指令由 `npm run dev:web / dev:desktop` 統一改為 `npm run dev`（`tsx server.ts`）
+- 移除 `electron/main.cjs` 與 electron-builder 打包設定
+
+#### Results Report — 長條圖視覺化
+- 新增四大潛能得分長條圖（BarChart），使用 Recharts BarChart + LabelList
+- 各 bar 以對應潛能顏色填色，懸停顯示分數 tooltip
+
+#### PDF 字體載入優化
+- 中文字體改由 jsDelivr CDN（`cdn.jsdelivr.net/gh/googlefonts/noto-fonts`）動態載入
+- 實作 `cachedFontBase64Promise` 全域快取，同一 session 僅下載一次（約 7MB）
+- 移除舊版需要本地 `fonts/NotoSansTC-Regular.ttf` 的載入邏輯
+
+#### AI 模型選項更新
+- 新增可選模型：`gemini-3.1-pro-preview`、`gemini-3-flash`、`gemini-3.1-flash-lite`
+- 新增繁中說明：最強推理能力 / 多模態理解 / 最低成本低延遲
+
+#### Report Generator AI 分析強化
+- 移除原有 `/api/ai/generate-report` API 呼叫，改為前端直接呼叫 Gemini SDK
+- 強化分析提示詞：加入「摘要開頭 2-3 句」、「數字呈現更直覺（用排名 / 百分比）」、「高標準差先結論後列表」等輸出規範
+- 嚴格禁止 AI 下結論、給改善建議、做因果推論
+
+#### SurveyBuilder 重構
+- 移除舊版 Question Bank（Supabase 來源）、Dimension 篩選、AI 助手 tab
+- 移除 `INDUSTRY_PRIORITIES` 硬編碼常數
+- 新增「清除所有題目」功能，需確認對話框才執行
+- 修正 AI 產出語言：預設值隨系統語言切換同步更新
+
+### 🐛 錯誤修復
+- 修復 `DiamondChart` 未接收 `scale_points` prop 導致計算錯誤的問題
+- 修復 `ResultsReport` 中 `useRef` 未正確清理的潛在記憶體問題
+- 修復 `html2canvas-pro` → `html2canvas 1.4.1`（版本相容性問題）
+
+### ⚠️ 重大變更
+- **不再提供 Windows 安裝版 (.exe)**：架構已轉為網頁，需 Node.js 18+ 執行
+- **SurveyBuilder 舊版 Question Bank 功能移除**：改由次指標系統取代
+- **`/api/ai/generate-report` 端點移除**：AI 功能改為前端直接呼叫
+
+---
 ## [4.1.0] - 2026-04-04
 
 ### 🎉 重大功能更新
