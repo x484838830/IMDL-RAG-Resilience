@@ -69,7 +69,6 @@
 - 修復 `html2canvas-pro` → `html2canvas 1.4.1`（版本相容性問題）
 
 ### ⚠️ 重大變更
-- **不再提供 Windows 安裝版 (.exe)**：架構已轉為網頁，需 Node.js 18+ 執行
 - **SurveyBuilder 舊版 Question Bank 功能移除**：改由次指標系統取代
 - **`/api/ai/generate-report` 端點移除**：AI 功能改為前端直接呼叫
 
