@@ -24,6 +24,16 @@
 
 ## ✨ 版本功能 | Version Features
 
+### v4.2.0 新功能 🆕
+- 🏥 **次指標系統（Sub-Indicators）**：內建 80+ 個醫療場域次指標，依部門（整合醫學病房、急診、AMU、內科、門診）與四大能力維度篩選，中英雙語定義
+- 🤖 **AI 批次出題**：選取次指標後，透過自訂受測對象、聚焦方向、調查目的，一鍵批次生成 Likert 量表題目
+- 🔔 **自動異常偵測**：資料載入後自動呼叫 Gemini API，偵測高標準差指標、低分維度、跨維度差異，以 Alert 提示卡呈現
+- 💬 **AI 互動聊天**：Report Generator 頁新增聊天介面，可針對分析資料與 AI 即時對話
+- 🌐 **架構轉移**：從 Electron 桌面 app 轉為 Express + Vite 全端網頁架構，執行更輕量（`npm run dev`）
+- 📊 **長條圖摘要**：Results Report 新增四大潛能長條圖，一眼看出各維度相對強弱
+- 🔤 **字體 CDN 載入**：PDF 中文字體改由 jsDelivr CDN 動態載入並快取，不再需要本地字型檔
+- 🧠 **新 Gemini 模型**：新增 Gemini 3.1 Pro Preview、Gemini 3 Flash、Gemini 3.1 Flash-Lite 可選
+  
 ### v4.1.0 新功能 🆕
 - 📝 **問卷建立器全面升級**：專案式管理（Project → Version），支援版本控制與歷史追蹤
 - 📚 **題庫系統（Question Bank）**：內建分類題庫，依產業（製造業、醫療、科技、金融）與維度篩選推薦題目
