@@ -1,12 +1,12 @@
-# RAG 韌性評估分析系統 | RAG Resilience Analyzer
+# IMDL RAG PRO — RAG 韌性評估分析系統 | RAG Resilience Platform
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/version-3.2.0-green.svg)](https://github.com/x484838830/RAG-Resilience-Analyzer)
+[![Version](https://img.shields.io/badge/version-5.0.0-green.svg)](https://github.com/x484838830/RAG-Resilience-Analyzer)
 [![TypeScript](https://img.shields.io/badge/TypeScript-97.5%25-blue.svg)](https://github.com/x484838830/RAG-Resilience-Analyzer)
 
-> 組織韌性問卷自動化分析工具 | Organizational Resilience Survey Analysis Tool
+> 組織韌性評估平台 | Organizational Resilience (RAG) Assessment Platform
 > 
-> 專業級組織韌性評估與進階 PDF 報告生成系統
+> 問卷設計、批次發送、RAG 分析、AI 報告、韌性追蹤與醫院韌性指數（HRRI）；提供網頁版與 Windows 桌面版
 
 ---
 
@@ -16,7 +16,7 @@
 
 | 版本 | 下載 | 發布日期 |
 |------|------|----------|
-| **v5.0.0** | [IMDP RAG PRO 5.0.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v5.0.0/IMDL.RAG.PRO.Setup.5.0.0.exe) | 2026-04-04 |
+| **v5.0.0** | [IMDL RAG PRO Setup 5.0.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v5.0.0/IMDL.RAG.PRO.Setup.5.0.0.exe) | 2026-06-15 |
 | **Analyzer** | [IMDL_RAG_Analyzer.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/IMDL_RAG_Analyzer/RAG.Analyzer.Setup.exe) | 2026-05-04 |
 
 **系統需求 | System Requirements**：Windows 10/11 (64-bit)、4GB RAM、1000MB 硬碟空間
@@ -24,6 +24,15 @@
 ---
 
 ## ✨ 版本功能 | Version Features
+
+### v5.0.0 新功能 🆕
+- 🏥 **醫院韌性指數（HRRI）**：關鍵性加權非補償式彙總 + CFC 封頂，頭條分數／四能力雷達／科×能力熱區圖三件並陳
+- ✉️ **問卷發送系統**：四步驟精靈、Excel 名單匯入與逐筆驗證、邀請信即時預覽、Resend 批次寄送＋測試信、信內 QR Code
+- 📈 **韌性能力追蹤**：時間序列／跨部門／前後對比，Baseline 串接、雷達疊圖、差異卡、分數比較、趨勢圖
+- ☁️ **雲端帳號與資料同步**：Google 登入、Supabase（RLS 權限隔離）雲端問卷管理、公開填答頁；未登入以 Demo 模式本機備援
+- 🖥️ **桌面版重新上線**：Electron + NSIS 安裝精靈（IMDL RAG PRO Setup 5.0.0.exe）
+- 🔐 **桌面版 Google 登入**：系統瀏覽器 + 本機 loopback（PKCE），避開內嵌瀏覽器封鎖
+- 🏥 **醫療照護次指標全面更新**：依中英文總表重建 50 個次指標（五科），修正英文錯位與重複
 
 ### v4.2.0 新功能 🆕
 - 🏥 **次指標系統（Sub-Indicators）**：內建 80+ 個醫療場域次指標，依部門（整合醫學病房、急診、AMU、內科、門診）與四大能力維度篩選，中英雙語定義
@@ -114,8 +123,9 @@
 | ✅ 匯出 Excel | 一鍵匯出分析資料至 Excel 檔案 |
 | ✅ 圖表外觀自訂 | 可選擇主題色票、調整線條粗細與透明度 |
 | ✅ 表格排序 | 點擊標題即可排序，快速找出弱項 |
-| ✅ 完全離線 | 無需網路連線即可使用 |
-| ✅ 資料隱私 | 所有資料在本地處理，不上傳雲端 |
+| ✅ 雲端同步 | 登入後問卷／分析／追蹤資料同步至 Supabase（RLS 權限隔離） |
+| ✅ 離線備援 | 未登入時以本機 localStorage 暫存（Demo 模式） |
+| ✅ 帳號登入 | Google 帳號登入（網頁彈窗 / 桌面系統瀏覽器） |
 | ✅ 三級績效分類 | 更細緻的績效評估（紅/橘/綠） |
 | ✅ 資料品質警告 | 自動偵測未定義的回答選項 |
 | ✅ 中英文雙語介面 | 一鍵切換語言，全系統同步 |
@@ -125,14 +135,14 @@
 
 ## 🛠️ 技術亮點 | Technical Highlights
 
-- 使用 **React 18 + TypeScript + Vite** 打造
-- **Tailwind CSS** 響應式設計（桌機 + 行動裝置）
-- **Recharts** 圖表庫提供互動式視覺化
-- **jsPDF + jspdf-autotable** 專業 PDF 報告生成
-- **SheetJS (xlsx)** Excel 檔案匯入匯出
-- **Noto Sans TC** 中文字體嵌入（中文版）
-- **Electron** 跨平台桌面應用程式框架
-- 即時計算與分析，無需伺服器
+- 使用 **React 18 + TypeScript + Vite + Tailwind CSS 4** 打造
+- **Express 5** 後端（開發整合 Vite middleware；桌面版由 Electron 內嵌）
+- **Supabase**（Postgres + Auth + RLS）雲端資料與帳號，未登入以 localStorage 備援
+- **Google Gemini（@google/genai）** 提供 AI 出題與報告
+- **Recharts** 互動式圖表（雷達圖、菱形圖、熱區圖、趨勢圖）
+- **jsPDF + jspdf-autotable + html2canvas** 專業 PDF 報告生成
+- **SheetJS (xlsx)** Excel 匯入匯出
+- **Electron + electron-builder** 打包 Windows 桌面安裝版（NSIS）
 
 ---
 
@@ -192,13 +202,11 @@
 ### Q: 可以在 Mac 上使用嗎？
 **A:** 目前僅支援 Windows，Mac 版本規劃中。
 
-### Q: 資料會被上傳到雲端嗎？
-**A:** 不會！所有資料都在您的電腦本地處理，絕不上傳。
+### Q: 我的資料存在哪裡？
+**A:** 登入後，問卷、分析與追蹤資料儲存於 **Supabase 雲端**（受 RLS 權限保護，僅你本人可存取）；未登入時則以本機 localStorage 暫存（Demo 模式）。AI 出題／報告與 Google 登入需要網路連線。
 
-### Q: 中文版和英文版有什麼差異？
-**A:** 
-- 中文版：介面全中文、PDF 報告支援中文、配置檔可用中文 Potential 名稱
-- 英文版：介面全英文、PDF 報告英文
+### Q: 中英文如何切換？
+**A:** 本版為單一應用程式，於帳號選單可一鍵切換繁體中文 / 英文，全系統（含 PDF 報告）同步切換，無需安裝不同語言版本。
 
 ### Q: 如何自訂圖表顏色？
 **A:** 在配置檔中新增 `Colors` 工作表，格式如下：
@@ -298,3 +306,4 @@
 **⭐ If this project helps you, please give us a Star!**
 
 Made with ❤️ by [Hsuan-Hao Lo](https://github.com/x484838830)
+
