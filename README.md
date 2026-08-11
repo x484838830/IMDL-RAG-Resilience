@@ -16,8 +16,8 @@
 
 | 版本 | 下載 | 發布日期 |
 |------|------|----------|
-| **v5.2.0** | [IMDL RAG PRO Setup 5.2.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v5.2.0/IMDL.RAG.PRO.Setup.5.2.0.exe) | 2026-08-12 |
-| **Analyzer** | [IMDL_RAG_Analyzer.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/IMDL_RAG_Analyzer/RAG.Analyzer.Setup.exe) | 2026-05-04 |
+| **IMDL RAG PRO** | [IMDL RAG PRO Setup 5.2.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v5.2.0/IMDL.RAG.PRO.Setup.5.2.0.exe) | 2026-08-12 |
+| **IMDL RAG Analyzer** | [IMDL_RAG_Analyzer.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/IMDL_RAG_Analyzer/RAG.Analyzer.Setup.exe) | 2026-05-04 |
 
 **系統需求 | System Requirements**：Windows 10/11 (64-bit)、4GB RAM、1000MB 硬碟空間
 
