@@ -1,7 +1,7 @@
 # IMDL RAG PRO — RAG 韌性評估分析系統 | RAG Resilience Platform
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/version-5.0.0-green.svg)](https://github.com/x484838830/RAG-Resilience-Analyzer)
+[![Version](https://img.shields.io/badge/version-5.2.0-green.svg)](https://github.com/x484838830/RAG-Resilience-Analyzer)
 [![TypeScript](https://img.shields.io/badge/TypeScript-97.5%25-blue.svg)](https://github.com/x484838830/RAG-Resilience-Analyzer)
 
 > 組織韌性評估平台 | Organizational Resilience (RAG) Assessment Platform
@@ -16,7 +16,7 @@
 
 | 版本 | 下載 | 發布日期 |
 |------|------|----------|
-| **v5.0.0** | [IMDL RAG PRO Setup 5.0.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v5.0.0/IMDL.RAG.PRO.Setup.5.0.0.exe) | 2026-06-15 |
+| **v5.2.0** | [IMDL RAG PRO Setup 5.2.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v5.2.0/IMDL.RAG.PRO.Setup.5.2.0.exe) | 2026-08-12 |
 | **Analyzer** | [IMDL_RAG_Analyzer.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/IMDL_RAG_Analyzer/RAG.Analyzer.Setup.exe) | 2026-05-04 |
 
 **系統需求 | System Requirements**：Windows 10/11 (64-bit)、4GB RAM、1000MB 硬碟空間
@@ -25,10 +25,20 @@
 
 ## ✨ 版本功能 | Version Features
 
-### v5.0.0 新功能 🆕
+### v5.2.0 新功能 🆕（正式發布版）
+- 🏥 **醫院韌性指數（HRI）方法學定案**：四層算術平均（題目→次指標→潛能→部門→全院）+ 各層 μ／σ，取代先前的加權／封頂設計；定位為描述性輪廓
+- 🗂️ **HRI 資料總覽升級**：分析紀錄可刪除、自動推薦「同部門跨期」比較組合一鍵帶入、頁面動線重排
+- 📊 **PDF 報告圖表重製**：雷達圖與菱形圖 900×720 置中高清輸出，修正匯出變形問題；Excel 匯出改為內建模組
+- 📈 **韌性能力比較整併**：次指標雷達與明細合併為「韌性能力明細比較雷達圖」；中英文嚴格分離；「基準」欄一鍵設定基準；追蹤類型改為自由填寫的專案描述
+- 🧠 **Gemini 模型更新**：預設 `gemini-3.6-flash`，可選 3.5 Flash / 3.1 Pro / 3.5 Flash-Lite，舊設定自動遷移
+- 🎨 **介面細節**：主標題漸層流動文字、問卷發送步驟列微動畫、帳號選單全面中文化
+- 🔒 **資安加固**：移除金鑰洩漏端點、CORS 同源限定、外開連結協定白名單、Supabase RLS 加固腳本、依賴漏洞 24 → 5
+- 🐛 **修復**：Gmail 登入報錯、追蹤模組比較數據顯示錯誤、步驟切換空白等
+
+### v5.0.0 新功能
 - 🏥 **醫院韌性指數（HRRI）**：關鍵性加權非補償式彙總 + CFC 封頂，頭條分數／四能力雷達／科×能力熱區圖三件並陳
 - ✉️ **問卷發送系統**：四步驟精靈、Excel 名單匯入與逐筆驗證、邀請信即時預覽、Resend 批次寄送＋測試信、信內 QR Code
-- 📈 **韌性能力追蹤**：時間序列／跨部門／前後對比，Baseline 串接、雷達疊圖、差異卡、分數比較、趨勢圖
+- 📈 **韌性能力比較**：時間序列／跨部門／前後對比，Baseline 串接、雷達疊圖、差異卡、分數比較、趨勢圖
 - ☁️ **雲端帳號與資料同步**：Google 登入、Supabase（RLS 權限隔離）雲端問卷管理、公開填答頁；未登入以 Demo 模式本機備援
 - 🖥️ **桌面版重新上線**：Electron + NSIS 安裝精靈（IMDL RAG PRO Setup 5.0.0.exe）
 - 🔐 **桌面版 Google 登入**：系統瀏覽器 + 本機 loopback（PKCE），避開內嵌瀏覽器封鎖
@@ -226,6 +236,23 @@
 
 ## 📝 更新日誌 | Changelog
 
+### v5.2.0 (2026-08-12) - 正式發布版
+- 🏥 HRI 方法學定案（四層算術平均 + μ/σ）
+- 📊 PDF 圖表重製、Excel 匯出修復
+- 📈 追蹤模組整併與中英文嚴格分離
+- 🔒 打包前資安全面加固（依賴漏洞 24 → 5）
+
+### v5.1.0 (2026-07-28)
+- ✨ 互動式 WebGL 粒子背景
+- ✏️ 「韌性能力追蹤」更名「韌性能力比較」
+
+### v5.0.0 (2026-06-15)
+- 🏥 醫院韌性指數（HRI）模組
+- ✉️ 問卷發送系統（名單匯入、邀請信、批次寄送）
+- 📈 韌性能力比較模組
+- ☁️ 雲端帳號與資料同步（Supabase + Google 登入）
+- 🖥️ Windows 桌面版重新上線（Electron）
+
 ### v4.0.0 (2026-03-17)
 - 🌐 中英文雙語介面（i18n）
 - 🤖 AI 助手（Google Gemini 整合）
@@ -299,6 +326,7 @@
 
 | 版本 | 下載 | 發布日期 |
 |------|------|----------|
+| v5.0.0 | [IMDL RAG PRO Setup 5.0.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v5.0.0/IMDL.RAG.PRO.Setup.5.0.0.exe) | 2026-06-15 |
 | v3.2.0 中文版 | [RAG Resilience Analyzer Chinese Setup 3.2.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v3.2.0/RAG.Resilience.Analyzer.Chinese.Setup.3.2.0.exe) | 2026-02-08 |
 | v3.2.0 英文版 | [RAG Resilience Analyzer Setup 3.2.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v3.2.0/RAG.Resilience.Analyzer.Setup.3.2.0.exe) | 2026-02-08 |
 
