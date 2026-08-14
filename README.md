@@ -1,7 +1,7 @@
 # IMDL RAG PRO — RAG 韌性評估分析系統 | RAG Resilience Platform
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/version-5.2.0-green.svg)](https://github.com/x484838830/RAG-Resilience-Analyzer)
+[![Version](https://img.shields.io/badge/version-5.3.0-green.svg)](https://github.com/x484838830/RAG-Resilience-Analyzer)
 [![TypeScript](https://img.shields.io/badge/TypeScript-97.5%25-blue.svg)](https://github.com/x484838830/RAG-Resilience-Analyzer)
 
 > 組織韌性評估平台 | Organizational Resilience (RAG) Assessment Platform
@@ -16,8 +16,8 @@
 
 | 版本 | 下載 | 發布日期 |
 |------|------|----------|
-| **IMDL RAG PRO** | [IMDL RAG PRO Setup 5.2.0.exe](https://github.com/x484838830/IMDL-RAG-Resilience/releases/download/v5.2.0/IMDL.RAG.PRO.Setup.5.2.0.exe) | 2026-08-12 |
-| **IMDL RAG Analyzer** | [IMDL_RAG_Analyzer.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/IMDL_RAG_Analyzer/RAG.Analyzer.Setup.exe) | 2026-05-04 |
+| **v5.3.0** | [IMDL RAG PRO Setup 5.3.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v5.3.0/IMDL.RAG.PRO.Setup.5.3.0.exe) | 2026-08-15 |
+| **Analyzer** | [IMDL_RAG_Analyzer.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/IMDL_RAG_Analyzer/RAG.Analyzer.Setup.exe) | 2026-05-04 |
 
 **系統需求 | System Requirements**：Windows 10/11 (64-bit)、4GB RAM、1000MB 硬碟空間
 
@@ -25,8 +25,15 @@
 
 ## ✨ 版本功能 | Version Features
 
-### v5.2.0 新功能 🆕（正式發布版）
-- 🏥 **醫院韌性指數（HRI）方法學定案**：四層算術平均（題目→次指標→潛能→部門→全院）。
+### v5.3.0 新功能 🆕
+- 🏥 **HRI 模組更名「同時間不同部門比較」**：新增「各部門四潛能雷達比較」（各部門疊加同一張雷達圖）＋各部門平均值概念說明；「四潛能剖面」更名「四潛能雷達圖」
+- 📈 **追蹤模組顯示強化**：差異摘要卡單行儀表板化（部門徽章、期別標籤、流動箭頭）、雷達比較改紅藍高對比、次指標「最弱／進步最多／退步最多」三清單、資料總覽期別欄凍結＋拖曳
+- 🌐 **部門中英對照**：急診 Emergency Department、門診 Outpatient Department 等全名顯示，套用於全系統；「新增追蹤計畫」彈窗完整雙語化
+- 📊 **RAG 分析頁**：基本資訊新增部門下拉（與存檔連動）、量表級距警示訊息
+- 🐛 **修復**：PDF 報告首頁標題過長超出 A4（自動換行＋流動排版）
+
+### v5.2.0 新功能（正式發布版）
+- 🏥 **醫院韌性指數（HRI）方法學定案**：四層算術平均（題目→次指標→潛能→部門→全院）+ 各層 μ／σ，取代先前的加權／封頂設計；定位為描述性輪廓
 - 🗂️ **HRI 資料總覽升級**：分析紀錄可刪除、自動推薦「同部門跨期」比較組合一鍵帶入、頁面動線重排
 - 📊 **PDF 報告圖表重製**：雷達圖與菱形圖 900×720 置中高清輸出，修正匯出變形問題；Excel 匯出改為內建模組
 - 📈 **韌性能力比較整併**：次指標雷達與明細合併為「韌性能力明細比較雷達圖」；中英文嚴格分離；「基準」欄一鍵設定基準；追蹤類型改為自由填寫的專案描述
@@ -44,7 +51,7 @@
 - 🔐 **桌面版 Google 登入**：系統瀏覽器 + 本機 loopback（PKCE），避開內嵌瀏覽器封鎖
 - 🏥 **醫療照護次指標全面更新**：依中英文總表重建 50 個次指標（五科），修正英文錯位與重複
 
-### v4.2.0 新功能 
+### v4.2.0 新功能 🆕
 - 🏥 **次指標系統（Sub-Indicators）**：內建 80+ 個醫療場域次指標，依部門（整合醫學病房、急診、AMU、內科、門診）與四大能力維度篩選，中英雙語定義
 - 🤖 **AI 批次出題**：選取次指標後，透過自訂受測對象、聚焦方向、調查目的，一鍵批次生成 Likert 量表題目
 - 🔔 **自動異常偵測**：資料載入後自動呼叫 Gemini API，偵測高標準差指標、低分維度、跨維度差異，以 Alert 提示卡呈現
@@ -54,7 +61,7 @@
 - 🔤 **字體 CDN 載入**：PDF 中文字體改由 jsDelivr CDN 動態載入並快取，不再需要本地字型檔
 - 🧠 **新 Gemini 模型**：新增 Gemini 3.1 Pro Preview、Gemini 3 Flash、Gemini 3.1 Flash-Lite 可選
   
-### v4.1.0 新功能 
+### v4.1.0 新功能 🆕
 - 📝 **問卷建立器全面升級**：專案式管理（Project → Version），支援版本控制與歷史追蹤
 - 📚 **題庫系統（Question Bank）**：內建分類題庫，依產業（製造業、醫療、科技、金融）與維度篩選推薦題目
 - 🤖 **AI 輔助出題**：透過自然語言描述自動生成問卷題目（整合 Gemini AI）
@@ -236,6 +243,12 @@
 
 ## 📝 更新日誌 | Changelog
 
+### v5.3.0 (2026-08-15)
+- 🏥 HRI 更名「同時間不同部門比較」＋各部門雷達疊加比較
+- 📈 追蹤模組顯示強化（摘要卡重設計、紅藍對比雷達、資料總覽拖曳）
+- 🌐 部門中英對照與追蹤彈窗完整雙語化
+- 🐛 PDF 首頁標題跑版修正
+
 ### v5.2.0 (2026-08-12) - 正式發布版
 - 🏥 HRI 方法學定案（四層算術平均 + μ/σ）
 - 📊 PDF 圖表重製、Excel 匯出修復
@@ -326,6 +339,7 @@
 
 | 版本 | 下載 | 發布日期 |
 |------|------|----------|
+| v5.2.0 | [IMDL RAG PRO Setup 5.2.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v5.2.0/IMDL.RAG.PRO.Setup.5.2.0.exe) | 2026-08-12 |
 | v5.0.0 | [IMDL RAG PRO Setup 5.0.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v5.0.0/IMDL.RAG.PRO.Setup.5.0.0.exe) | 2026-06-15 |
 | v3.2.0 中文版 | [RAG Resilience Analyzer Chinese Setup 3.2.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v3.2.0/RAG.Resilience.Analyzer.Chinese.Setup.3.2.0.exe) | 2026-02-08 |
 | v3.2.0 英文版 | [RAG Resilience Analyzer Setup 3.2.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v3.2.0/RAG.Resilience.Analyzer.Setup.3.2.0.exe) | 2026-02-08 |
