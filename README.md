@@ -1,12 +1,12 @@
 # IMDL RAG PRO — RAG 韌性評估分析系統 | RAG Resilience Platform
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/version-5.3.0-green.svg)](https://github.com/x484838830/RAG-Resilience-Analyzer)
+[![Version](https://img.shields.io/badge/version-5.4.0-green.svg)](https://github.com/x484838830/RAG-Resilience-Analyzer)
 [![TypeScript](https://img.shields.io/badge/TypeScript-97.5%25-blue.svg)](https://github.com/x484838830/RAG-Resilience-Analyzer)
 
 > 組織韌性評估平台 | Organizational Resilience (RAG) Assessment Platform
 > 
-> 問卷設計、批次發送、RAG 分析、AI 報告、韌性追蹤與醫院韌性指數（HRRI）；提供網頁版與 Windows 桌面版
+> 問卷設計、批次發送、RAG 分析、AI 報告、韌性能力比較與醫院韌性指數（HRI）；提供網頁版與 Windows 桌面版
 
 ---
 
@@ -16,7 +16,7 @@
 
 | 版本 | 下載 | 發布日期 |
 |------|------|----------|
-| **v5.3.0** | [IMDL RAG PRO Setup 5.3.0.exe](https://github.com/x484838830/IMDL-RAG-Resilience/releases/download/v5.3.0/IMDL.RAG.PRO.Setup.5.3.0.exe) | 2026-08-15 |
+| **v5.4.0** | [IMDL RAG PRO Setup 5.4.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v5.4.0/IMDL.RAG.PRO.Setup.5.4.0.exe) | 2026-08-16 |
 | **Analyzer** | [IMDL_RAG_Analyzer.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/IMDL_RAG_Analyzer/RAG.Analyzer.Setup.exe) | 2026-05-04 |
 
 **系統需求 | System Requirements**：Windows 10/11 (64-bit)、4GB RAM、1000MB 硬碟空間
@@ -25,7 +25,15 @@
 
 ## ✨ 版本功能 | Version Features
 
-### v5.3.0 新功能 🆕
+### v5.4.0 新功能 🆕
+- 🏥 **HRI 波次計算架構**：模組定名「醫院韌性指數 HRI」；從已儲存紀錄依波次（時間窗）聚合計算全院 HRI——跨波次混算在結構上不存在；HRI 數字旁強制並列涵蓋資訊（N 部門、M 份問卷），缺原始資料的部門以灰色列明確標示
+- 📖 **Reference 方法論證據頁**：每個 HRI 數字帶著自己的正當性證明——方法依據表（CTT／ICC／等權 μσ 非補償性並陳）＋本波次證據（Cronbach's α、ICC(1)/(2) 兩層體檢、σ 旗標），判讀門檻預先定死
+- 🔀 **比較流程整併**：資料總覽矩陣單一入口（韌性能力比較頁），橫列跨期比較與縱欄跨部門比較都就地開啟同一個「新增追蹤計畫」彈窗，分析共用同一套計畫詳情頁
+- 🔍 **介面縮放**：帳號選單新增縮放控制（67%–150%），各台電腦記憶自己的設定，適配不同顯示器
+- 🔒 **資安修復**：修復登入使用者可看到其他人專案的 RLS 政策問題（前端 owner 過濾＋資料庫修復腳本）
+- 🌐 **術語統一**：respondent／Potential／Hospital Medicine Ward 全系統定案；RAG Analysis、問卷設計管理等模組更名
+
+### v5.3.0 新功能
 - 🏥 **HRI 模組更名「同時間不同部門比較」**：新增「各部門四潛能雷達比較」（各部門疊加同一張雷達圖）＋各部門平均值概念說明；「四潛能剖面」更名「四潛能雷達圖」
 - 📈 **追蹤模組顯示強化**：差異摘要卡單行儀表板化（部門徽章、期別標籤、流動箭頭）、雷達比較改紅藍高對比、次指標「最弱／進步最多／退步最多」三清單、資料總覽期別欄凍結＋拖曳
 - 🌐 **部門中英對照**：急診 Emergency Department、門診 Outpatient Department 等全名顯示，套用於全系統；「新增追蹤計畫」彈窗完整雙語化
@@ -51,7 +59,7 @@
 - 🔐 **桌面版 Google 登入**：系統瀏覽器 + 本機 loopback（PKCE），避開內嵌瀏覽器封鎖
 - 🏥 **醫療照護次指標全面更新**：依中英文總表重建 50 個次指標（五科），修正英文錯位與重複
 
-### v4.2.0 新功能 🆕
+### v4.2.0 新功能 
 - 🏥 **次指標系統（Sub-Indicators）**：內建 80+ 個醫療場域次指標，依部門（整合醫學病房、急診、AMU、內科、門診）與四大能力維度篩選，中英雙語定義
 - 🤖 **AI 批次出題**：選取次指標後，透過自訂受測對象、聚焦方向、調查目的，一鍵批次生成 Likert 量表題目
 - 🔔 **自動異常偵測**：資料載入後自動呼叫 Gemini API，偵測高標準差指標、低分維度、跨維度差異，以 Alert 提示卡呈現
@@ -243,6 +251,14 @@
 
 ## 📝 更新日誌 | Changelog
 
+### v5.4.0 (2026-08-16)
+- 🏥 HRI 波次計算架構（同波次結構性保證＋涵蓋透明化＋缺測明確標示）
+- 📖 Reference 方法論證據頁（方法依據＋α／ICC／σ 本波次體檢）
+- 🔀 兩種比較流程整併為資料總覽單一入口
+- 🔍 介面縮放功能（67%–150%，各機記憶）
+- 🔒 修復跨使用者資料可見的 RLS 資安問題
+- 🌐 respondent／Potential／Hospital Medicine Ward 術語全系統統一
+
 ### v5.3.0 (2026-08-15)
 - 🏥 HRI 更名「同時間不同部門比較」＋各部門雷達疊加比較
 - 📈 追蹤模組顯示強化（摘要卡重設計、紅藍對比雷達、資料總覽拖曳）
@@ -339,6 +355,7 @@
 
 | 版本 | 下載 | 發布日期 |
 |------|------|----------|
+| v5.3.0 | [IMDL RAG PRO Setup 5.3.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v5.3.0/IMDL.RAG.PRO.Setup.5.3.0.exe) | 2026-08-15 |
 | v5.2.0 | [IMDL RAG PRO Setup 5.2.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v5.2.0/IMDL.RAG.PRO.Setup.5.2.0.exe) | 2026-08-12 |
 | v5.0.0 | [IMDL RAG PRO Setup 5.0.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v5.0.0/IMDL.RAG.PRO.Setup.5.0.0.exe) | 2026-06-15 |
 | v3.2.0 中文版 | [RAG Resilience Analyzer Chinese Setup 3.2.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v3.2.0/RAG.Resilience.Analyzer.Chinese.Setup.3.2.0.exe) | 2026-02-08 |
