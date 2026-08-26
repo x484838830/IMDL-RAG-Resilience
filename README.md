@@ -1,7 +1,7 @@
 # IMDL RAG PRO — RAG 韌性評估分析系統 | RAG Resilience Platform
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/version-5.4.0-green.svg)](https://github.com/x484838830/RAG-Resilience-Analyzer)
+[![Version](https://img.shields.io/badge/version-5.5.0-green.svg)](https://github.com/x484838830/RAG-Resilience-Analyzer)
 [![TypeScript](https://img.shields.io/badge/TypeScript-97.5%25-blue.svg)](https://github.com/x484838830/RAG-Resilience-Analyzer)
 
 > 組織韌性評估平台 | Organizational Resilience (RAG) Assessment Platform
@@ -16,7 +16,7 @@
 
 | 版本 | 下載 | 發布日期 |
 |------|------|----------|
-| **v5.4.0** | [IMDL RAG PRO Setup 5.4.0.exe](https://github.com/x484838830/IMDL-RAG-Resilience/releases/download/v5.4.0/IMDL.RAG.PRO.Setup.5.4.0.exe) | 2026-08-16 |
+| **v5.5.0** | [IMDL RAG PRO Setup 5.5.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v5.5.0/IMDL.RAG.PRO.Setup.5.5.0.exe) | 2026-08-25 |
 | **Analyzer** | [IMDL_RAG_Analyzer.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/IMDL_RAG_Analyzer/RAG.Analyzer.Setup.exe) | 2026-05-04 |
 
 **系統需求 | System Requirements**：Windows 10/11 (64-bit)、4GB RAM、1000MB 硬碟空間
@@ -25,7 +25,13 @@
 
 ## ✨ 版本功能 | Version Features
 
-### v5.4.0 新功能 🆕
+### v5.5.0 新功能 🆕
+- 🏢 **同期跨部門比較改版（純粹並列）**：跨部門計畫不再借用「基準→最新」視圖——每部門一張總覽卡、雷達圖 N 條線一部門一色、分數明細帶期別、02 頁籤改為「潛能差異」分組長條圖、次指標頁部門 × 次指標對照；**沒有基準、沒有標竿**，建立與管理流程同步移除相關欄位；頁首類型徽章清楚標示比較類型
+- 🎨 **部門顏色固定**：同一部門在 HRI 頁與比較頁永遠同一顏色
+- 🤖 **AI 助手 Q&A 引用同頁產出**：自然語言查詢可直接問「異常分析第三點」或「報告裡的建議」，回答與已生成內容一致
+- 🔠 **全系統字級放大**：比較、HRI、AI 報告、問卷建立等頁面內文 +2px、最小 13px，適配桌面版顯示
+
+### v5.4.0 新功能
 - 🏥 **HRI 波次計算架構**：模組定名「醫院韌性指數 HRI」；從已儲存紀錄依波次（時間窗）聚合計算全院 HRI——跨波次混算在結構上不存在；HRI 數字旁強制並列涵蓋資訊（N 部門、M 份問卷），缺原始資料的部門以灰色列明確標示
 - 📖 **Reference 方法論證據頁**：每個 HRI 數字帶著自己的正當性證明——方法依據表（CTT／ICC／等權 μσ 非補償性並陳）＋本波次證據（Cronbach's α、ICC(1)/(2) 兩層體檢、σ 旗標），判讀門檻預先定死
 - 🔀 **比較流程整併**：資料總覽矩陣單一入口（韌性能力比較頁），橫列跨期比較與縱欄跨部門比較都就地開啟同一個「新增追蹤計畫」彈窗，分析共用同一套計畫詳情頁
@@ -69,7 +75,7 @@
 - 🔤 **字體 CDN 載入**：PDF 中文字體改由 jsDelivr CDN 動態載入並快取，不再需要本地字型檔
 - 🧠 **新 Gemini 模型**：新增 Gemini 3.1 Pro Preview、Gemini 3 Flash、Gemini 3.1 Flash-Lite 可選
   
-### v4.1.0 新功能 🆕
+### v4.1.0 新功能 
 - 📝 **問卷建立器全面升級**：專案式管理（Project → Version），支援版本控制與歷史追蹤
 - 📚 **題庫系統（Question Bank）**：內建分類題庫，依產業（製造業、醫療、科技、金融）與維度篩選推薦題目
 - 🤖 **AI 輔助出題**：透過自然語言描述自動生成問卷題目（整合 Gemini AI）
@@ -251,6 +257,11 @@
 
 ## 📝 更新日誌 | Changelog
 
+### v5.5.0 (2026-08-25)
+- 🏢 同期跨部門比較改版為純粹並列比較（無基準／標竿），依部門固定配色
+- 🤖 AI 助手 Q&A 可引用同頁異常分析與完整報告
+- 🔠 全系統字級放大（內文 +2px、最小 13px）
+
 ### v5.4.0 (2026-08-16)
 - 🏥 HRI 波次計算架構（同波次結構性保證＋涵蓋透明化＋缺測明確標示）
 - 📖 Reference 方法論證據頁（方法依據＋α／ICC／σ 本波次體檢）
@@ -355,6 +366,7 @@
 
 | 版本 | 下載 | 發布日期 |
 |------|------|----------|
+| v5.4.0 | [IMDL RAG PRO Setup 5.4.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v5.4.0/IMDL.RAG.PRO.Setup.5.4.0.exe) | 2026-08-16 |
 | v5.3.0 | [IMDL RAG PRO Setup 5.3.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v5.3.0/IMDL.RAG.PRO.Setup.5.3.0.exe) | 2026-08-15 |
 | v5.2.0 | [IMDL RAG PRO Setup 5.2.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v5.2.0/IMDL.RAG.PRO.Setup.5.2.0.exe) | 2026-08-12 |
 | v5.0.0 | [IMDL RAG PRO Setup 5.0.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v5.0.0/IMDL.RAG.PRO.Setup.5.0.0.exe) | 2026-06-15 |
