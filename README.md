@@ -1,7 +1,7 @@
 # IMDL RAG PRO — RAG 韌性評估分析系統 | RAG Resilience Platform
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/version-5.5.0-green.svg)](https://github.com/x484838830/RAG-Resilience-Analyzer)
+[![Version](https://img.shields.io/badge/version-5.6.0-green.svg)](https://github.com/x484838830/RAG-Resilience-Analyzer)
 [![TypeScript](https://img.shields.io/badge/TypeScript-97.5%25-blue.svg)](https://github.com/x484838830/RAG-Resilience-Analyzer)
 
 > 組織韌性評估平台 | Organizational Resilience (RAG) Assessment Platform
@@ -16,7 +16,7 @@
 
 | 版本 | 下載 | 發布日期 |
 |------|------|----------|
-| **v5.5.0** | [IMDL RAG PRO Setup 5.5.0.exe](https://github.com/x484838830/IMDL-RAG-Resilience/releases/download/v5.5.0/IMDL.RAG.PRO.Setup.5.5.0.exe) | 2026-08-25 |
+| **v5.6.0** | [IMDL RAG PRO Setup 5.6.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v5.6.0/IMDL.RAG.PRO.Setup.5.6.0.exe) | 2026-08-31 |
 | **Analyzer** | [IMDL_RAG_Analyzer.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/IMDL_RAG_Analyzer/RAG.Analyzer.Setup.exe) | 2026-05-04 |
 
 **系統需求 | System Requirements**：Windows 10/11 (64-bit)、4GB RAM、1000MB 硬碟空間
@@ -25,7 +25,14 @@
 
 ## ✨ 版本功能 | Version Features
 
-### v5.5.0 新功能 🆕
+### v5.6.0 新功能 🆕
+- 🧭 **資料總覽兩步驟引導**：「第一步 · 選擇比較方式」兩張大卡（趨勢分析／跨部門比較）＋第二步動態指示整行橫幅，第一次使用也知道要點哪裡；一次只開放一種選取方向，選過的模式各機記憶
+- 📈 **多部門趨勢分析**：趨勢模式可勾選多個部門一起看跨期變化——每部門一卡總覽、一部門一線的趨勢折線圖（潛能切換、只連各部門實際測量點）、部門 × 期別分數明細；無需指定初始分數
+- 🎨 **跨期比較雷達圖升級**：完整歷程一律全畫、圖例點選顯示／隱藏各期、滑過高亮、色點展開七色調色盤自選線色（各機各計畫記憶）；取消超過 5 筆默默剪枝
+- 🏷️ **術語統一**：「初始分數／中間分數／最新分數」全系統取代「基準／歷史／最新」；跨部門比較英文定案 Comparison Across Unit
+- ⚡ **流程順化**：儲存追蹤計畫後直接進入詳情頁；詳情頁頁首精簡
+
+### v5.5.0 新功能
 - 🏢 **同期跨部門比較改版（純粹並列）**：跨部門計畫不再借用「基準→最新」視圖——每部門一張總覽卡、雷達圖 N 條線一部門一色、分數明細帶期別、02 頁籤改為「潛能差異」分組長條圖、次指標頁部門 × 次指標對照；**沒有基準、沒有標竿**，建立與管理流程同步移除相關欄位；頁首類型徽章清楚標示比較類型
 - 🎨 **部門顏色固定**：同一部門在 HRI 頁與比較頁永遠同一顏色
 - 🤖 **AI 助手 Q&A 引用同頁產出**：自然語言查詢可直接問「異常分析第三點」或「報告裡的建議」，回答與已生成內容一致
@@ -65,7 +72,7 @@
 - 🔐 **桌面版 Google 登入**：系統瀏覽器 + 本機 loopback（PKCE），避開內嵌瀏覽器封鎖
 - 🏥 **醫療照護次指標全面更新**：依中英文總表重建 50 個次指標（五科），修正英文錯位與重複
 
-### v4.2.0 新功能 
+### v4.2.0 新功能 🆕
 - 🏥 **次指標系統（Sub-Indicators）**：內建 80+ 個醫療場域次指標，依部門（整合醫學病房、急診、AMU、內科、門診）與四大能力維度篩選，中英雙語定義
 - 🤖 **AI 批次出題**：選取次指標後，透過自訂受測對象、聚焦方向、調查目的，一鍵批次生成 Likert 量表題目
 - 🔔 **自動異常偵測**：資料載入後自動呼叫 Gemini API，偵測高標準差指標、低分維度、跨維度差異，以 Alert 提示卡呈現
@@ -75,7 +82,7 @@
 - 🔤 **字體 CDN 載入**：PDF 中文字體改由 jsDelivr CDN 動態載入並快取，不再需要本地字型檔
 - 🧠 **新 Gemini 模型**：新增 Gemini 3.1 Pro Preview、Gemini 3 Flash、Gemini 3.1 Flash-Lite 可選
   
-### v4.1.0 新功能 
+### v4.1.0 新功能 🆕
 - 📝 **問卷建立器全面升級**：專案式管理（Project → Version），支援版本控制與歷史追蹤
 - 📚 **題庫系統（Question Bank）**：內建分類題庫，依產業（製造業、醫療、科技、金融）與維度篩選推薦題目
 - 🤖 **AI 輔助出題**：透過自然語言描述自動生成問卷題目（整合 Gemini AI）
@@ -257,6 +264,13 @@
 
 ## 📝 更新日誌 | Changelog
 
+### v5.6.0 (2026-08-31)
+- 🧭 資料總覽兩步驟引導（選比較方式 → 動態指示）
+- 📈 多部門趨勢分析（多部門一起跨期比較，無需初始分數）
+- 🎨 跨期比較雷達圖：期別顯隱、高亮、自選線色
+- 🏷️ 初始分數／中間分數／最新分數術語全系統統一
+- ⚡ 儲存計畫直接進入詳情頁、頁首精簡
+
 ### v5.5.0 (2026-08-25)
 - 🏢 同期跨部門比較改版為純粹並列比較（無基準／標竿），依部門固定配色
 - 🤖 AI 助手 Q&A 可引用同頁異常分析與完整報告
@@ -366,6 +380,7 @@
 
 | 版本 | 下載 | 發布日期 |
 |------|------|----------|
+| v5.5.0 | [IMDL RAG PRO Setup 5.5.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v5.5.0/IMDL.RAG.PRO.Setup.5.5.0.exe) | 2026-08-25 |
 | v5.4.0 | [IMDL RAG PRO Setup 5.4.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v5.4.0/IMDL.RAG.PRO.Setup.5.4.0.exe) | 2026-08-16 |
 | v5.3.0 | [IMDL RAG PRO Setup 5.3.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v5.3.0/IMDL.RAG.PRO.Setup.5.3.0.exe) | 2026-08-15 |
 | v5.2.0 | [IMDL RAG PRO Setup 5.2.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v5.2.0/IMDL.RAG.PRO.Setup.5.2.0.exe) | 2026-08-12 |
