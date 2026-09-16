@@ -1,12 +1,12 @@
 # IMDL RAG PRO — RAG 韌性評估分析系統 | RAG Resilience Platform
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/version-5.6.0-green.svg)](https://github.com/x484838830/RAG-Resilience-Analyzer)
+[![Version](https://img.shields.io/badge/version-5.7.0-green.svg)](https://github.com/x484838830/RAG-Resilience-Analyzer)
 [![TypeScript](https://img.shields.io/badge/TypeScript-97.5%25-blue.svg)](https://github.com/x484838830/RAG-Resilience-Analyzer)
 
 > 組織韌性評估平台 | Organizational Resilience (RAG) Assessment Platform
 > 
-> 問卷設計、批次發送、RAG 分析、AI 報告、韌性能力比較與醫院韌性指數（HRI）；提供網頁版與 Windows 桌面版
+> 問卷設計、Google 表單建立與回收、批次發送、韌性能力分析、AI 報告、韌性能力比較與醫院韌性指數（HRI）；提供網頁版與 Windows 桌面版
 
 ---
 
@@ -16,7 +16,7 @@
 
 | 版本 | 下載 | 發布日期 |
 |------|------|----------|
-| **v5.6.0** | [IMDL RAG PRO Setup 5.6.0.exe](https://github.com/x484838830/IMDL-RAG-Resilience/releases/download/v5.6.0/IMDL.RAG.PRO.Setup.5.6.0.exe) | 2026-08-31 |
+| **v5.7.0** | [IMDL RAG PRO Setup 5.7.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v5.7.0/IMDL.RAG.PRO.Setup.5.7.0.exe) | 2026-09-10 |
 | **Analyzer** | [IMDL_RAG_Analyzer.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/IMDL_RAG_Analyzer/RAG.Analyzer.Setup.exe) | 2026-05-04 |
 
 **系統需求 | System Requirements**：Windows 10/11 (64-bit)、4GB RAM、1000MB 硬碟空間
@@ -25,7 +25,18 @@
 
 ## ✨ 版本功能 | Version Features
 
-### v5.6.0 新功能 🆕
+### v5.7.0 新功能 🆕
+- 📋 **問卷即定義檔**：韌性能力分析不再上傳設定檔——選「使用的問卷」，量表對照、四潛能與次指標對照、題序全部自動帶入；產業別、部門、量表級距標示「已自動帶入」；回覆檔題目起始欄自動偵測、預覽頁可微調；設定檔上傳降為「進階」（僅外部問卷需要）；已確定的問卷可「下載設定檔」
+- 📝 **Google 表單一鍵建立與回收**：問卷預覽可直接在您的雲端硬碟建立 Google 表單（部門題＋全部題目，選項文字＝量表標籤）；問卷邀請一鍵帶入表單連結；韌性能力分析「從 Google 表單匯入」——取得回覆、選部門、匯入，題目欄位自動對齊、可另存 Excel；附「教學與說明」視窗與清楚的錯誤指引
+- 🧭 **韌性能力比較參數化**：資料矩陣改為「趨勢分析／跨部門比較」兩張模式卡＋參數面板（部門多選＋期別範圍／期別＋部門勾選），資料再多也不會撐爆版面
+- 🏥 **HRI 全面使用系統內資料**：移除上傳與示範資料；「計算 HRI」選期別勾部門即算，「HRI 趨勢分析」折線圖＋追蹤清單
+- 🤖 **AI 分析報告回歸韌性能力分析**：結果頁「AI分析報告產生」＋「匯出AI分析報告 (PDF)」保留畫面視覺風格；「AI解析資料報告」模組專注「問卷數據異常分析」與「向 AI 提問」
+- 🌐 **題目中英雙語自由切換**：AI 產題一次產出中英兩版；舊問卷一鍵「補齊中英文」；四潛能與次指標標籤同步翻譯
+- ✏️ **問卷建立順化**：「建立新問卷」移至問卷建立頁並自動聚焦名稱欄；Likert 預設 5 點、可選 3～7 點；製造業次指標保留
+- 🧠 **Gemini 3.8 Flash**：預設模型升級，可選 3.7 Flash / 3.1 Pro / 3.5 Flash-Lite，舊設定自動升級
+- 🐛 **修復**：首次登入偶爾直接進入範例資料（範例資料不再寫入本機儲存）
+
+### v5.6.0 新功能
 - 🧭 **資料總覽兩步驟引導**：「第一步 · 選擇比較方式」兩張大卡（趨勢分析／跨部門比較）＋第二步動態指示整行橫幅，第一次使用也知道要點哪裡；一次只開放一種選取方向，選過的模式各機記憶
 - 📈 **多部門趨勢分析**：趨勢模式可勾選多個部門一起看跨期變化——每部門一卡總覽、一部門一線的趨勢折線圖（潛能切換、只連各部門實際測量點）、部門 × 期別分數明細；無需指定初始分數
 - 🎨 **跨期比較雷達圖升級**：完整歷程一律全畫、圖例點選顯示／隱藏各期、滑過高亮、色點展開七色調色盤自選線色（各機各計畫記憶）；取消超過 5 筆默默剪枝
@@ -154,7 +165,10 @@
 
 | 功能 | 說明 |
 |------|------|
-| ✅ 自動化問卷分析 | 上傳 Excel 問卷資料，自動計算分數 |
+| ✅ 問卷即定義檔 | 在系統確定的問卷即為分析定義，量表與題目對照自動帶入，不需設定檔 |
+| ✅ Google 表單一鍵建立與回收 | 問卷預覽直接建立 Google 表單；回覆一鍵回收匯入分析 |
+| ✅ 自動化問卷分析 | 上傳 Excel 回覆資料（或從 Google 表單匯入），自動計算分數 |
+| ✅ AI 分析報告 | 描述、比較、標記值得關注之處的 AI 報告，可匯出 PDF |
 | ✅ 視覺化報告 | 生成四個 Potential 的雷達圖 |
 | ✅ 菱形圖分析 | 顯示各 Potential 面積占比與整體韌性分數 |
 | ✅ 匯出 PDF | 一鍵下載完整多頁專業分析報告 |
@@ -167,7 +181,9 @@
 | ✅ 三級績效分類 | 更細緻的績效評估（紅/橘/綠） |
 | ✅ 資料品質警告 | 自動偵測未定義的回答選項 |
 | ✅ 中英文雙語介面 | 一鍵切換語言，全系統同步 |
-| ✅ AI 助手 | 整合 Google Gemini，支援自訂 API Key |
+| ✅ AI 助手 | 整合 Google Gemini（預設 3.8 Flash），支援自訂 API Key |
+| ✅ 韌性能力比較 | 趨勢分析（多部門跨期）與跨部門比較，參數式設定 |
+| ✅ 醫院韌性指數 HRI | 依期別勾選部門計算全院 HRI，附趨勢分析與方法論證據頁 |
 
 ---
 
@@ -176,7 +192,8 @@
 - 使用 **React 18 + TypeScript + Vite + Tailwind CSS 4** 打造
 - **Express 5** 後端（開發整合 Vite middleware；桌面版由 Electron 內嵌）
 - **Supabase**（Postgres + Auth + RLS）雲端資料與帳號，未登入以 localStorage 備援
-- **Google Gemini（@google/genai）** 提供 AI 出題與報告
+- **Google Gemini（@google/genai）** 提供 AI 出題、中英翻譯、異常分析與分析報告（預設 gemini-3.8-flash）
+- **Google Forms API** 建立問卷表單與回收回覆（沿用 Supabase Google 登入授權）
 - **Recharts** 互動式圖表（雷達圖、菱形圖、熱區圖、趨勢圖）
 - **jsPDF + jspdf-autotable + html2canvas** 專業 PDF 報告生成
 - **SheetJS (xlsx)** Excel 匯入匯出
@@ -197,35 +214,27 @@
 首次執行時可能會出現「Windows 已保護您的電腦」提示，這是正常的。  
 點擊「更多資訊」→「仍要執行」即可。
 
-### 2. 準備問卷檔案 | Prepare Files
+### 2. 建立問卷與收集回覆 | Build the Survey & Collect Responses
 
-您需要兩個 Excel 檔案：
+1. **問卷建立**：建立問卷、AI 依次指標產題（中英雙語）、確定問卷。確定後的問卷版本就是分析定義，之後不需要另外的設定檔
+2. **建立 Google 表單（選用）**：預覽問卷 → 「建立 Google 表單」→ 第一次允許 Google 授權 → 表單出現在您的雲端硬碟（第 1 題為部門，其後每題選項＝量表文字）。「複製填答連結」即可發送；「問卷邀請」也能直接帶入這個連結批次寄送
+3. **回覆來源二選一**：
+   - 從 Google 表單一鍵回收（韌性能力分析 → 「從 Google 表單匯入」）
+   - 或整理成 Excel／CSV：第一個工作表、第一列為標題、每列一位受訪者；題目欄依問卷順序連續排列，前面可有時間戳記／信箱／部門等欄位；答案為量表文字（如「同意」）或 1～N 的數字
 
-#### 📊 問卷資料檔 (Survey Data)
-- 包含受訪者填答的 Likert 量表問題
-- 格式：每一列是一位受訪者，每一欄是一個問題
+> ⚙️ **外部問卷才需要設定檔**：不是在本系統建立的問卷，可在「進階：自行上傳設定檔」提供四工作表格式（`Settings` 起始欄、`Likert_Mapping` 回答→分數、`Question_Mapping` 題目→Potential、`Colors` 選填），並可「下載空白設定檔範本」。
 
-#### ⚙️ 配置檔 (Configuration)
-需要包含以下工作表：
-
-| 工作表 | 說明 |
-|--------|------|
-| `Settings` | 問題起始欄位設定 |
-| `Likert_Mapping` | 回答選項與分數對應 |
-| `Question_Mapping` | 題目與 Potential 對應 |
-| `Colors`（選填） | 自訂各 Potential 顏色 |
-
-**💡 提示：** 啟動程式後可點擊「下載配置範本」取得範例檔案。
+> 🔧 **Google 表單功能的一次性設定**（系統管理者）：在 Supabase Google 登入所用的 Google Cloud 專案啟用 Google Forms API、同意畫面加入 `forms.body` 與 `forms.responses.readonly`、測試模式下加入測試使用者；並在 Supabase SQL Editor 執行 `supabase/google_forms_migration.sql`。詳見 `docs/google-forms-integration.md` 與系統內「教學與說明」。
 
 ### 3. 分析流程 | Analysis Process
 
-1. 啟動程式
-2. 輸入組織名稱（選填）
-3. 上傳「問卷資料檔」和「配置檔」
-4. 點擊「開始分析」
-5. 調整圖表外觀（主題、線條粗細、透明度）
-6. 查看四個雷達圖和菱形圖
-7. 點擊「匯出 PDF」或「匯出 Excel」下載報告
+1. 進入「韌性能力分析」，輸入組織／報告標題
+2. 步驟二選「使用的問卷」——產業別、量表級距自動帶入，四潛能題數即時顯示
+3. 提供回覆資料：上傳 Excel／CSV，或「從 Google 表單匯入」（選部門後匯入，部門與期別自動帶入）
+4. 點「下一步」：預覽頁確認題目起始欄（自動偵測，可 −／＋ 微調）與對照片段
+5. 查看四個雷達圖、菱形圖與各題統計；調整圖表外觀
+6. 「匯出分析報告 (PDF)」「匯出分析結果 (Excel)」或「AI分析報告產生」→「匯出AI分析報告 (PDF)」
+7. 「儲存至韌性能力比較」後可進行跨期／跨部門比較，並在「醫院韌性指數 HRI」依期別計算全院 HRI
 
 ---
 
@@ -246,8 +255,14 @@
 ### Q: 中英文如何切換？
 **A:** 本版為單一應用程式，於帳號選單可一鍵切換繁體中文 / 英文，全系統（含 PDF 報告）同步切換，無需安裝不同語言版本。
 
+### Q: 建立 Google 表單時顯示「尚未啟用 Google Forms API」或「沒有拿到表單權限」？
+**A:** 這是系統管理者的一次性設定還沒完成，與使用者操作無關。請到 Supabase Google 登入所用的 Google Cloud 專案啟用 Google Forms API（訊息裡有「前往啟用」連結），並確認同意畫面已加入表單權限、您的帳號在測試使用者清單中。啟用後等 1～2 分鐘直接再按一次即可。系統內的「教學與說明」有完整步驟。
+
+### Q: 回覆 Excel 要長什麼樣子才能分析？
+**A:** 第一個工作表、第一列為標題、每列一位受訪者；題目欄依問卷順序連續排列，前面可以有時間戳記、信箱、部門等欄位；答案為量表文字（例如「同意」）或 1～N 的數字。系統會依問卷第一題文字自動定位起始欄，預覽頁可再微調。從 Google 表單匯入則完全不需整理。
+
 ### Q: 如何自訂圖表顏色？
-**A:** 在配置檔中新增 `Colors` 工作表，格式如下：
+**A:** 僅外部問卷的設定檔流程支援：在配置檔中新增 `Colors` 工作表，格式如下：
 | Potential | Color (Hex/Name) |
 |-----------|------------------|
 | Response | #3b82f6 |
@@ -263,6 +278,17 @@
 ---
 
 ## 📝 更新日誌 | Changelog
+
+### v5.7.0 (2026-09-10)
+- 📋 問卷即定義檔：韌性能力分析不再上傳設定檔，對照自動帶入（產業別／部門／量表級距標示已自動帶入）
+- 📝 Google 表單一鍵建立、問卷邀請帶入連結、回覆一鍵回收匯入；教學與說明視窗
+- 🧭 韌性能力比較改為模式卡＋參數面板（移除資料矩陣）
+- 🏥 HRI 移除上傳與示範資料，改為「計算 HRI」與「HRI 趨勢分析」
+- 🤖 AI 分析報告回歸韌性能力分析並可匯出 PDF；模組更名「AI解析資料報告」「韌性能力分析」
+- 🌐 題目中英雙語跟著介面切換、一鍵補齊中英文
+- ✏️ 建立新問卷移至問卷建立頁、Likert 3～7 點可選
+- 🧠 Gemini 預設升級 3.8 Flash
+- 🐛 修復首次登入直接進入範例資料
 
 ### v5.6.0 (2026-08-31)
 - 🧭 資料總覽兩步驟引導（選比較方式 → 動態指示）
@@ -380,6 +406,7 @@
 
 | 版本 | 下載 | 發布日期 |
 |------|------|----------|
+| v5.6.0 | [IMDL RAG PRO Setup 5.6.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v5.6.0/IMDL.RAG.PRO.Setup.5.6.0.exe) | 2026-08-31 |
 | v5.5.0 | [IMDL RAG PRO Setup 5.5.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v5.5.0/IMDL.RAG.PRO.Setup.5.5.0.exe) | 2026-08-25 |
 | v5.4.0 | [IMDL RAG PRO Setup 5.4.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v5.4.0/IMDL.RAG.PRO.Setup.5.4.0.exe) | 2026-08-16 |
 | v5.3.0 | [IMDL RAG PRO Setup 5.3.0.exe](https://github.com/x484838830/RAG-Resilience-Analyzer/releases/download/v5.3.0/IMDL.RAG.PRO.Setup.5.3.0.exe) | 2026-08-15 |
